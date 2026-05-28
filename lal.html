@@ -1,0 +1,491 @@
+
+<h2 class="sr-only">Engineering Physics 2-Marks Questions and Answers — All 5 Units, JNTUA R23 Santhiram Engineering College</h2>
+
+<style>
+:root { --gap: 14px; }
+.ep-wrap { padding: 1rem 0; font-size: 15px; color: var(--color-text-primary); }
+.unit-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+.unit-btn { padding: 8px 14px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); background: var(--color-background-primary); color: var(--color-text-secondary); cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.15s; }
+.unit-btn.active { background: #EEEDFE; color: #3C3489; border-color: #AFA9EC; }
+.unit-header { padding: 1rem 1.25rem; background: var(--color-background-secondary); border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); margin-bottom: 1rem; }
+.unit-title { font-size: 16px; font-weight: 500; color: #3C3489; margin: 0 0 4px; }
+.unit-sub { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+.qa-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); margin-bottom: 10px; overflow: hidden; }
+.qa-q { display: flex; align-items: flex-start; gap: 10px; padding: 12px 16px; cursor: pointer; }
+.qa-q:hover { background: var(--color-background-secondary); }
+.q-num { min-width: 26px; height: 26px; border-radius: 50%; background: #EEEDFE; color: #3C3489; font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.q-text { font-size: 14px; font-weight: 500; flex: 1; line-height: 1.5; }
+.q-arrow { font-size: 14px; color: var(--color-text-secondary); transition: transform 0.2s; margin-top: 3px; flex-shrink: 0; }
+.q-arrow.open { transform: rotate(180deg); }
+.qa-a { display: none; padding: 0 16px 14px 52px; }
+.qa-a.show { display: block; }
+.qa-a p { font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.7; margin: 0 0 8px; }
+.qa-a ul { margin: 4px 0 8px; padding-left: 16px; }
+.qa-a ul li { font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 3px; }
+.qa-a strong { color: var(--color-text-primary); font-weight: 500; }
+.diag-box { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 14px; margin-top: 8px; }
+.diag-label { font-size: 11px; font-weight: 500; color: #534AB7; letter-spacing: 0.04em; margin-bottom: 6px; text-transform: uppercase; }
+.formula { background: #EEEDFE; border-left: 2px solid #534AB7; padding: 6px 10px; border-radius: 0 6px 6px 0; font-size: 13px; font-family: var(--font-mono); color: #3C3489; margin: 6px 0; }
+.imp-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #FAECE7; color: #993C1D; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+.progress-bar { height: 4px; background: var(--color-border-tertiary); border-radius: 2px; margin-bottom: 1.2rem; }
+.progress-fill { height: 100%; background: #7F77DD; border-radius: 2px; transition: width 0.3s; }
+.stats { display: flex; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap; }
+.stat-chip { font-size: 12px; padding: 4px 10px; border-radius: 20px; background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); }
+</style>
+
+<div class="ep-wrap">
+  <div style="margin-bottom:1.2rem;">
+    <p style="font-size:14px;color:var(--color-text-secondary);margin:0 0 10px;">Select a unit — tap any question to reveal the answer.</p>
+    <div class="stats">
+      <span class="stat-chip">📘 JNTUA R23 Pattern</span>
+      <span class="stat-chip">🎯 Santhiram Engineering College</span>
+      <span class="stat-chip">⏱ 2-Mark Questions</span>
+    </div>
+  </div>
+
+  <div class="unit-tabs" id="tabs"></div>
+  <div class="progress-bar"><div class="progress-fill" id="prog" style="width:20%"></div></div>
+  <div id="unit-content"></div>
+</div>
+
+<script>
+const units = [
+  {
+    id: 1,
+    name: "Unit I",
+    title: "Wave Optics",
+    sub: "Interference, Diffraction, Polarization",
+    qs: [
+      { q: "Define interference of light. State the principle of superposition.", imp: true,
+        a: `<p><strong>Interference</strong> is the phenomenon where two coherent light waves superimpose to produce alternate bright and dark fringes (bands).</p>
+            <p><strong>Principle of Superposition:</strong> When two or more waves meet at a point, the resultant displacement is the algebraic sum of individual displacements.</p>
+            <div class="formula">y = y₁ + y₂</div>
+            <div class="diag-box"><div class="diag-label">Constructive vs Destructive</div>
+            <svg viewBox="0 0 420 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <text x="10" y="20" font-size="11" fill="#3C3489" font-weight="500">Constructive (Bright):</text>
+              <path d="M10 55 Q35 35 60 55 Q85 75 110 55 Q135 35 160 55" stroke="#534AB7" fill="none" stroke-width="1.5"/>
+              <text x="170" y="59" font-size="11" fill="#534AB7">Path diff = nλ</text>
+              <text x="220" y="20" font-size="11" fill="#993C1D" font-weight="500">Destructive (Dark):</text>
+              <path d="M220 55 Q245 35 270 55 Q295 75 320 55 Q345 35 370 55" stroke="#D85A30" fill="none" stroke-width="1.5"/>
+              <text x="375" y="59" font-size="11" fill="#D85A30">= (2n-1)λ/2</text>
+            </svg></div>` },
+      { q: "What is thin film interference? Give the conditions for bright and dark fringes.", imp: true,
+        a: `<p>When light falls on a thin transparent film, reflections from the top and bottom surfaces interfere.</p>
+            <p><strong>Conditions:</strong></p>
+            <ul><li><strong>Bright fringe:</strong> 2μt cos r = (2n-1)λ/2 &nbsp;[destructive path difference]</li>
+            <li><strong>Dark fringe:</strong> 2μt cos r = nλ</li></ul>
+            <p>where μ = refractive index, t = thickness, r = angle of refraction, n = integer</p>
+            <div class="diag-box"><div class="diag-label">Thin film diagram</div>
+            <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <rect x="30" y="30" width="240" height="30" fill="#E6F1FB" stroke="#185FA5" stroke-width="1" rx="2"/>
+              <text x="130" y="49" font-size="10" fill="#0C447C" text-anchor="middle">Thin Film (μ, t)</text>
+              <line x1="90" y1="5" x2="90" y2="30" stroke="#534AB7" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <line x1="90" y1="30" x2="120" y2="60" stroke="#D85A30" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <text x="55" y="22" font-size="9" fill="#534AB7">Incident</text>
+              <text x="122" y="72" font-size="9" fill="#D85A30">Reflected 2</text>
+              <line x1="90" y1="5" x2="70" y2="30" stroke="#7F77DD" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <text x="14" y="46" font-size="9" fill="#7F77DD">R1</text>
+            </svg></div>` },
+      { q: "What are Newton's rings? Why is the central spot dark in reflected light?",
+        a: `<p><strong>Newton's rings</strong> are concentric circular interference fringes formed by the air film between a plano-convex lens and a flat glass plate.</p>
+            <p>The central spot is dark because at the point of contact the air film thickness t = 0, but there is a phase change of π (180°) at the lower surface reflection, giving path difference = λ/2 → destructive interference → dark spot.</p>
+            <div class="formula">Dₙ² = 4nλR &nbsp;(bright rings)</div>` },
+      { q: "Differentiate Fresnel and Fraunhofer diffraction.", imp: true,
+        a: `<table style="width:100%;font-size:13px;border-collapse:collapse;">
+            <tr style="background:#EEEDFE;"><th style="padding:5px 8px;text-align:left;color:#3C3489;font-weight:500;border-bottom:1px solid #CCC;">Fresnel</th><th style="padding:5px 8px;text-align:left;color:#3C3489;font-weight:500;border-bottom:1px solid #CCC;">Fraunhofer</th></tr>
+            <tr><td style="padding:4px 8px;color:var(--color-text-secondary);">Source and screen at finite distance</td><td style="padding:4px 8px;color:var(--color-text-secondary);">Source and screen at infinite distance</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:4px 8px;color:var(--color-text-secondary);">No lenses needed</td><td style="padding:4px 8px;color:var(--color-text-secondary);">Lenses required</td></tr>
+            <tr><td style="padding:4px 8px;color:var(--color-text-secondary);">Wavefronts are spherical</td><td style="padding:4px 8px;color:var(--color-text-secondary);">Wavefronts are plane</td></tr>
+            </table>` },
+      { q: "State Bragg's law of X-ray diffraction.", imp: true,
+        a: `<p><strong>Bragg's Law:</strong> When X-rays are incident on crystal planes, constructive interference occurs when the path difference between rays reflected from successive planes equals an integral multiple of wavelength.</p>
+            <div class="formula">2d sinθ = nλ</div>
+            <p>where d = interplanar spacing, θ = glancing angle, n = order of diffraction, λ = wavelength of X-rays</p>
+            <div class="diag-box"><div class="diag-label">Bragg's reflection</div>
+            <svg viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <line x1="20" y1="50" x2="300" y2="50" stroke="#185FA5" stroke-width="1.5"/>
+              <line x1="20" y1="65" x2="300" y2="65" stroke="#185FA5" stroke-width="1.5"/>
+              <text x="302" y="54" font-size="9" fill="#185FA5">d₁</text><text x="302" y="69" font-size="9" fill="#185FA5">d₂</text>
+              <line x1="50" y1="10" x2="160" y2="50" stroke="#534AB7" stroke-width="1.5"/>
+              <line x1="160" y1="50" x2="270" y2="10" stroke="#534AB7" stroke-width="1.5"/>
+              <line x1="80" y1="65" x2="160" y2="50" stroke="#D85A30" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <line x1="160" y1="50" x2="240" y2="65" stroke="#D85A30" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <text x="145" y="46" font-size="9" fill="#534AB7">θ</text>
+              <text x="108" y="44" font-size="9" fill="#534AB7">θ</text>
+              <text x="120" y="78" font-size="9" fill="#0C447C" text-anchor="middle">Path diff = 2d sinθ = nλ</text>
+            </svg></div>` },
+      { q: "What is a diffraction grating? Define resolving power of a grating.",
+        a: `<p>A <strong>diffraction grating</strong> is an optical component with a large number of equally spaced parallel slits (N slits, grating element d).</p>
+            <div class="formula">d sinθ = nλ &nbsp;(grating equation)</div>
+            <p><strong>Resolving power</strong> = ability to distinguish two closely spaced spectral lines.</p>
+            <div class="formula">R = λ/dλ = nN</div>
+            <p>where n = order, N = total number of slits</p>` },
+      { q: "What is polarization of light? What does it prove about light?",
+        a: `<p><strong>Polarization</strong> is the process of restricting the vibrations of the electric field vector of light to a single plane (plane of polarization).</p>
+            <p>It proves that light is a <strong>transverse wave</strong> (vibrations perpendicular to direction of propagation), not longitudinal.</p>
+            <p>Ordinary (unpolarized) light vibrates in all planes. Plane polarized light vibrates in one plane only.</p>` },
+      { q: "What is double refraction (birefringence)? Name ordinary and extraordinary rays.", imp: true,
+        a: `<p>When a ray of light passes through certain crystals (like calcite/Iceland spar), it splits into <strong>two refracted rays</strong> — this is double refraction or birefringence.</p>
+            <ul><li><strong>Ordinary ray (O-ray):</strong> Obeys Snell's law, travels with same speed in all directions</li>
+            <li><strong>Extraordinary ray (E-ray):</strong> Does not obey Snell's law, travels with different speed in different directions</li></ul>
+            <p>Both rays are plane polarized and vibrate at 90° to each other.</p>` },
+      { q: "What is a Nicol prism? What is it used for?",
+        a: `<p>A <strong>Nicol prism</strong> is a device made from calcite crystal, cut diagonally and re-cemented with Canada balsam, used to produce and analyze plane polarized light.</p>
+            <p>The ordinary ray undergoes total internal reflection at the Canada balsam layer (μ = 1.55, between O-ray μ = 1.658 and E-ray μ = 1.486) and is removed. Only the extraordinary ray passes through — which is plane polarized.</p>` },
+      { q: "Differentiate half-wave plate and quarter-wave plate.",
+        a: `<table style="width:100%;font-size:13px;border-collapse:collapse;">
+            <tr style="background:#EEEDFE;"><th style="padding:5px 8px;text-align:left;color:#3C3489;font-weight:500;">Property</th><th style="padding:5px 8px;color:#3C3489;font-weight:500;text-align:left;">Half-wave plate</th><th style="padding:5px 8px;color:#3C3489;font-weight:500;text-align:left;">Quarter-wave plate</th></tr>
+            <tr><td style="padding:4px 8px;color:var(--color-text-secondary);">Path difference</td><td style="padding:4px 8px;color:var(--color-text-secondary);">λ/2</td><td style="padding:4px 8px;color:var(--color-text-secondary);">λ/4</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:4px 8px;color:var(--color-text-secondary);">Phase difference</td><td style="padding:4px 8px;color:var(--color-text-secondary);">π</td><td style="padding:4px 8px;color:var(--color-text-secondary);">π/2</td></tr>
+            <tr><td style="padding:4px 8px;color:var(--color-text-secondary);">Output</td><td style="padding:4px 8px;color:var(--color-text-secondary);">Rotates plane of polarization by 90°</td><td style="padding:4px 8px;color:var(--color-text-secondary);">Converts plane polarized to elliptical/circular</td></tr>
+            </table>` },
+      { q: "What is Newton's rings experiment used to measure?",
+        a: `<p>Newton's rings experiment is used to determine:</p>
+            <ul><li>Wavelength of monochromatic light (λ)</li>
+            <li>Radius of curvature of plano-convex lens (R)</li>
+            <li>Refractive index of liquids</li></ul>
+            <div class="formula">λ = (Dₙ₊ₘ² − Dₙ²) / (4mR)</div>` }
+    ]
+  },
+  {
+    id: 2,
+    name: "Unit II",
+    title: "Crystallography & X-ray Diffraction",
+    sub: "Crystal systems, Miller indices, Bragg's law",
+    qs: [
+      { q: "Define the following: unit cell, lattice parameters, coordination number.", imp: true,
+        a: `<ul><li><strong>Unit cell:</strong> The smallest repeating structural unit of a crystal lattice that retains all properties of the crystal.</li>
+            <li><strong>Lattice parameters:</strong> Axial lengths (a, b, c) and interaxial angles (α, β, γ) that describe the unit cell geometry.</li>
+            <li><strong>Coordination number:</strong> Number of nearest-neighbour atoms surrounding any given atom in a crystal structure.</li></ul>` },
+      { q: "What are Miller indices? How are they determined?", imp: true,
+        a: `<p><strong>Miller indices</strong> (h k l) are a set of three integers used to describe the orientation of crystal planes.</p>
+            <p><strong>Steps to find Miller indices:</strong></p>
+            <ul><li>Find intercepts of the plane on the three crystallographic axes: x, y, z</li>
+            <li>Take reciprocals of these intercepts</li>
+            <li>Convert to smallest integers by multiplying</li>
+            <li>Enclose in parentheses: (h k l)</li></ul>
+            <div class="formula">If intercepts: a/h, b/k, c/l → Miller indices = (hkl)</div>` },
+      { q: "What is the packing fraction? Find it for SC and BCC.", imp: true,
+        a: `<p><strong>Packing fraction (APF)</strong> = Volume occupied by atoms / Total volume of unit cell.</p>
+            <ul><li><strong>SC:</strong> 1 atom/cell, r = a/2</li></ul>
+            <div class="formula">APF (SC) = π/6 ≈ 0.52 (52%)</div>
+            <ul><li><strong>BCC:</strong> 2 atoms/cell, r = a√3/4</li></ul>
+            <div class="formula">APF (BCC) = π√3/8 ≈ 0.68 (68%)</div>
+            <ul><li><strong>FCC:</strong> 4 atoms/cell → APF = π/(3√2) ≈ 0.74 (74%) — highest</li></ul>` },
+      { q: "Write the separation between successive planes (d-spacing) formula for a cubic system.",
+        a: `<p>For a cubic crystal with Miller indices (h k l) and lattice constant a:</p>
+            <div class="formula">d_hkl = a / √(h² + k² + l²)</div>
+            <p>Examples:</p>
+            <ul><li>d₁₀₀ = a</li><li>d₁₁₀ = a/√2</li><li>d₁₁₁ = a/√3</li></ul>` },
+      { q: "Name the seven crystal systems with examples.", imp: true,
+        a: `<table style="width:100%;font-size:12.5px;border-collapse:collapse;">
+            <tr style="background:#EEEDFE;"><th style="padding:4px 8px;color:#3C3489;text-align:left;">System</th><th style="padding:4px 8px;color:#3C3489;text-align:left;">Conditions</th><th style="padding:4px 8px;color:#3C3489;text-align:left;">Example</th></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Cubic</td><td style="padding:3px 8px;color:var(--color-text-secondary);">a=b=c, α=β=γ=90°</td><td style="padding:3px 8px;color:var(--color-text-secondary);">NaCl, Cu</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:3px 8px;color:var(--color-text-secondary);">Tetragonal</td><td style="padding:3px 8px;color:var(--color-text-secondary);">a=b≠c, α=β=γ=90°</td><td style="padding:3px 8px;color:var(--color-text-secondary);">SnO₂</td></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Orthorhombic</td><td style="padding:3px 8px;color:var(--color-text-secondary);">a≠b≠c, 90° angles</td><td style="padding:3px 8px;color:var(--color-text-secondary);">BaSO₄</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:3px 8px;color:var(--color-text-secondary);">Hexagonal</td><td style="padding:3px 8px;color:var(--color-text-secondary);">a=b≠c, γ=120°</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Mg, Zn</td></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Rhombohedral</td><td style="padding:3px 8px;color:var(--color-text-secondary);">a=b=c, α=β=γ≠90°</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Calcite</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:3px 8px;color:var(--color-text-secondary);">Monoclinic</td><td style="padding:3px 8px;color:var(--color-text-secondary);">a≠b≠c, β≠90°</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Gypsum</td></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Triclinic</td><td style="padding:3px 8px;color:var(--color-text-secondary);">a≠b≠c, α≠β≠γ≠90°</td><td style="padding:3px 8px;color:var(--color-text-secondary);">CuSO₄</td></tr>
+            </table>` },
+      { q: "What is the Bravais lattice? How many Bravais lattices exist?",
+        a: `<p>Bravais lattices are distinct lattice types that fill space uniformly. There are <strong>14 Bravais lattices</strong> in 3D, classified under 7 crystal systems.</p>
+            <p>Types: Simple (P), Body-centered (I), Face-centered (F), Base-centered (C)</p>
+            <p>Cubic system alone has 3 Bravais lattices: SC, BCC, FCC.</p>` },
+      { q: "Define: basis, space lattice, and crystal structure.",
+        a: `<ul><li><strong>Space lattice:</strong> An infinite periodic array of points in space, where each point has identical surroundings.</li>
+            <li><strong>Basis:</strong> Atom or group of atoms attached to each lattice point.</li>
+            <li><strong>Crystal structure:</strong> Space lattice + Basis → Crystal structure</li></ul>
+            <div class="formula">Crystal structure = Space lattice + Basis</div>` },
+      { q: "What is the number of atoms per unit cell in SC, BCC, and FCC?", imp: true,
+        a: `<ul><li><strong>SC (Simple Cubic):</strong> 8 corner atoms × 1/8 = <strong>1 atom</strong></li>
+            <li><strong>BCC (Body Centered Cubic):</strong> 8×(1/8) + 1 = <strong>2 atoms</strong></li>
+            <li><strong>FCC (Face Centered Cubic):</strong> 8×(1/8) + 6×(1/2) = <strong>4 atoms</strong></li></ul>
+            <p>Coordination numbers: SC=6, BCC=8, FCC=12</p>` },
+      { q: "What is the X-ray diffractometer? What is it used for?",
+        a: `<p>An X-ray diffractometer is an instrument used to study the crystal structure of materials by measuring the angles and intensities of X-rays diffracted by a sample.</p>
+            <p>Working: X-rays from a source hit the crystal → diffracted at angle 2θ → detected by a counter → d-spacing calculated using Bragg's law.</p>
+            <p>Used for: identifying crystal structure, lattice constants, phase analysis.</p>` },
+      { q: "What are Laue's method and powder method in X-ray diffraction?",
+        a: `<ul><li><strong>Laue's method:</strong> A stationary single crystal is exposed to a beam of white (polychromatic) X-rays. Diffraction spots form a pattern revealing crystal symmetry.</li>
+            <li><strong>Powder (Debye-Scherrer) method:</strong> A powdered sample with randomly oriented crystallites is used with monochromatic X-rays. Produces concentric rings (Debye rings) from which d-spacings are calculated.</li></ul>` },
+      { q: "Define atomic radius and lattice constant for SC and BCC crystal.",
+        a: `<ul><li><strong>SC:</strong> Atoms touch along cube edge → r = a/2</li>
+            <li><strong>BCC:</strong> Atoms touch along body diagonal → 4r = a√3 → r = a√3/4</li>
+            <li><strong>FCC:</strong> Atoms touch along face diagonal → 4r = a√2 → r = a√2/4</li></ul>
+            <p>Lattice constant (a) = edge length of the unit cell.</p>` }
+    ]
+  },
+  {
+    id: 3,
+    name: "Unit III",
+    title: "Quantum Mechanics & Free Electron Theory",
+    sub: "Heisenberg, Schrödinger, Free electron model",
+    qs: [
+      { q: "State Heisenberg's Uncertainty Principle with mathematical expression.", imp: true,
+        a: `<p><strong>Heisenberg's Uncertainty Principle:</strong> It is impossible to simultaneously determine the exact position and exact momentum of a particle with absolute precision.</p>
+            <div class="formula">Δx · Δp ≥ ℏ/2 &nbsp;(where ℏ = h/2π)</div>
+            <p>Similarly for energy-time:</p>
+            <div class="formula">ΔE · Δt ≥ ℏ/2</div>
+            <p>This is a fundamental limitation of nature, not of measurement instruments.</p>` },
+      { q: "What is a wave function (ψ)? What are the conditions it must satisfy?", imp: true,
+        a: `<p>A <strong>wave function ψ(x,t)</strong> is a mathematical function that describes the quantum state of a particle. |ψ|² gives the probability density of finding the particle at position x.</p>
+            <p><strong>Conditions for ψ to be acceptable:</strong></p>
+            <ul><li>ψ must be single-valued</li>
+            <li>ψ must be finite everywhere</li>
+            <li>ψ and its first derivative must be continuous</li>
+            <li>ψ must be normalizable: ∫|ψ|² dV = 1</li></ul>` },
+      { q: "Write the time-independent Schrödinger wave equation.",
+        a: `<p>For a particle of mass m moving in a potential V:</p>
+            <div class="formula">-ℏ²/2m · (d²ψ/dx²) + V·ψ = E·ψ</div>
+            <p>Or in 3D:</p>
+            <div class="formula">∇²ψ + (2m/ℏ²)(E - V)ψ = 0</div>
+            <p>This is an eigenvalue equation where E is energy eigenvalue and ψ is eigenfunction.</p>` },
+      { q: "A particle is confined in a 1D infinite potential well. State boundary conditions and energy eigenvalues.", imp: true,
+        a: `<p>For a particle in a box (0 ≤ x ≤ L) with V=0 inside and V=∞ outside:</p>
+            <p><strong>Boundary conditions:</strong> ψ(0) = 0 and ψ(L) = 0</p>
+            <div class="formula">Eₙ = n²π²ℏ² / (2mL²) = n²h² / (8mL²)</div>
+            <p>n = 1, 2, 3... (quantum number). Ground state energy (n=1) is called zero-point energy. Energy is quantized.</p>` },
+      { q: "What are the assumptions of the free electron theory of metals?",
+        a: `<p>Drude-Lorentz Free Electron Theory assumes:</p>
+            <ul><li>Metals contain free electrons that move freely like ideal gas molecules</li>
+            <li>Positive ion cores are fixed, forming a uniform background</li>
+            <li>Electron-electron and electron-ion interactions are neglected</li>
+            <li>Electrons obey Maxwell-Boltzmann statistics</li>
+            <li>Electric field accelerates electrons; collisions cause resistance</li></ul>` },
+      { q: "Define Fermi energy and Fermi level. What is their significance?", imp: true,
+        a: `<p><strong>Fermi energy (EF):</strong> The highest energy occupied by an electron at absolute zero temperature (0 K).</p>
+            <p><strong>Fermi level:</strong> The energy level at which the probability of occupation is exactly 1/2 (50%) at any temperature above 0 K.</p>
+            <div class="formula">f(E) = 1 / [1 + e^((E-EF)/kT)]</div>
+            <p>At T=0 K: f(E)=1 for E&lt;EF and f(E)=0 for E&gt;EF</p>` },
+      { q: "What is the Fermi-Dirac distribution function? Explain its behavior at T=0 K and T>0 K.",
+        a: `<p>The <strong>Fermi-Dirac function</strong> f(E) gives the probability of an electron occupying an energy state E at temperature T:</p>
+            <div class="formula">f(E) = 1 / [1 + exp((E-EF)/kT)]</div>
+            <ul><li><strong>At T=0 K:</strong> Step function — f(E)=1 for E&lt;EF, f(E)=0 for E&gt;EF</li>
+            <li><strong>At T&gt;0 K:</strong> Smooth curve — some electrons above EF gain energy; probability smears near EF</li></ul>` },
+      { q: "What is the density of states? Give its formula.",
+        a: `<p><strong>Density of states g(E)</strong> is the number of available quantum states per unit energy interval per unit volume.</p>
+            <div class="formula">g(E) = (4π/h³)(2m)^(3/2) · E^(1/2)</div>
+            <p>It increases with √E. The number of electrons between E and E+dE = g(E)·f(E)·dE</p>` },
+      { q: "What is quantum free electron theory? How does it differ from classical free electron theory?",
+        a: `<ul><li><strong>Classical (Drude):</strong> Uses Maxwell-Boltzmann statistics; all electrons carry current; predicts wrong specific heat</li>
+            <li><strong>Quantum (Sommerfeld):</strong> Uses Fermi-Dirac statistics; only electrons near EF participate; correctly predicts low electronic specific heat</li></ul>
+            <p>Key improvement: Quantum theory treats electrons as quantum particles with wave nature, not classical gas.</p>` },
+      { q: "What is the significance of the wave function ψ and |ψ|²?",
+        a: `<ul><li><strong>ψ (wave function):</strong> Has no direct physical meaning but contains all quantum information about the particle</li>
+            <li><strong>|ψ|² (probability density):</strong> Gives the probability of finding the particle at a given position and time</li></ul>
+            <div class="formula">P(x) = |ψ(x)|² = ψ·ψ*</div>
+            <p>Normalization: ∫₋∞^∞ |ψ|² dx = 1 (particle must be found somewhere)</p>` },
+      { q: "Define Femi-Dirac distribution and write expression for density of electrons.",
+        a: `<p>Fermi-Dirac distribution gives probability of electron occupancy:</p>
+            <div class="formula">f(E) = 1 / [exp((E-EF)/kT) + 1]</div>
+            <p>Electron concentration:</p>
+            <div class="formula">n = ∫₀^∞ g(E) · f(E) dE</div>
+            <p>At 0 K: EF = (h²/8m)(3n/π)^(2/3)</p>` }
+    ]
+  },
+  {
+    id: 4,
+    name: "Unit IV",
+    title: "Dielectric & Magnetic Materials",
+    sub: "Polarization, Clausius-Mossotti, Magnetic properties, Hysteresis",
+    qs: [
+      { q: "Define dielectric polarization and polarizability. Write the relation.", imp: true,
+        a: `<p><strong>Dielectric polarization (P):</strong> The electric dipole moment per unit volume induced in a dielectric material when an electric field is applied.</p>
+            <p><strong>Polarizability (α):</strong> Measure of ability of a molecule to be polarized by an applied field.</p>
+            <div class="formula">P = ε₀ χₑ E &nbsp;and&nbsp; μ = α E</div>
+            <p>where χₑ = electric susceptibility, α = polarizability, E = applied field, μ = dipole moment</p>` },
+      { q: "What are the different types of polarization in dielectrics?", imp: true,
+        a: `<ul><li><strong>Electronic polarization (αₑ):</strong> Displacement of electron cloud relative to nucleus under E-field. Occurs in all materials. Frequency: up to UV.</li>
+            <li><strong>Ionic polarization (αᵢ):</strong> Relative displacement of positive and negative ions. Occurs in ionic solids. Frequency: up to IR.</li>
+            <li><strong>Orientation polarization (αₒ):</strong> Alignment of permanent dipoles along field. Temperature-dependent. Frequency: microwave and below.</li></ul>
+            <div class="formula">Total: αₜ = αₑ + αᵢ + αₒ</div>` },
+      { q: "State and derive the Clausius-Mossotti equation.", imp: true,
+        a: `<p>Clausius-Mossotti equation relates the macroscopic dielectric constant (εᵣ) to the microscopic polarizability (α):</p>
+            <div class="formula">(εᵣ - 1)/(εᵣ + 2) = Nα / (3ε₀)</div>
+            <p>where N = number of molecules per unit volume, α = molecular polarizability, ε₀ = permittivity of free space.</p>
+            <p>It connects measurable macroscopic properties to microscopic atomic behavior.</p>` },
+      { q: "What is the Lorentz local field? Why is it different from the applied field?",
+        a: `<p>The <strong>Lorentz local field (Eₗₒ꜀)</strong> is the actual electric field experienced by a molecule inside a dielectric, which is greater than the externally applied field E due to contributions from surrounding dipoles.</p>
+            <div class="formula">Eₗₒ꜀ = E + P/(3ε₀)</div>
+            <p>The extra P/3ε₀ term accounts for the field due to the polarized surrounding molecules (Lorentz sphere contribution).</p>` },
+      { q: "Define magnetic susceptibility and permeability. Write the relation.", imp: true,
+        a: `<p><strong>Magnetic susceptibility (χ):</strong> Measure of how easily a material gets magnetized in an applied field.</p>
+            <div class="formula">M = χH &nbsp;(magnetization)</div>
+            <p><strong>Permeability (μ):</strong> Measure of ability to support formation of a magnetic field.</p>
+            <div class="formula">B = μH = μ₀(H + M) = μ₀(1 + χ)H</div>
+            <p>Relative permeability: μᵣ = 1 + χ</p>` },
+      { q: "Compare dia, para, and ferromagnetic materials.", imp: true,
+        a: `<table style="width:100%;font-size:12.5px;border-collapse:collapse;">
+            <tr style="background:#EEEDFE;"><th style="padding:4px 8px;text-align:left;color:#3C3489;">Property</th><th style="padding:4px 8px;text-align:left;color:#3C3489;">Dia</th><th style="padding:4px 8px;text-align:left;color:#3C3489;">Para</th><th style="padding:4px 8px;text-align:left;color:#3C3489;">Ferro</th></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">χ value</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Small negative</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Small positive</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Large positive</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:3px 8px;color:var(--color-text-secondary);">In field</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Weakly repelled</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Weakly attracted</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Strongly attracted</td></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Domains</td><td style="padding:3px 8px;color:var(--color-text-secondary);">No domains</td><td style="padding:3px 8px;color:var(--color-text-secondary);">No domains</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Domains present</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:3px 8px;color:var(--color-text-secondary);">Example</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Bi, Cu, H₂O</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Al, Na, O₂</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Fe, Ni, Co</td></tr>
+            </table>` },
+      { q: "What are magnetic domains? How do they explain ferromagnetism?",
+        a: `<p><strong>Magnetic domains</strong> are small regions inside a ferromagnetic material where all atomic magnetic moments are aligned parallel to each other.</p>
+            <p>In the unmagnetized state, domains are oriented randomly → no net magnetization. When an external field is applied, domains aligned with the field grow at the expense of others → net magnetization increases.</p>
+            <div class="diag-box"><div class="diag-label">Domain alignment</div>
+            <svg viewBox="0 0 300 55" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <rect x="10" y="10" width="120" height="35" rx="3" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+              <text x="35" y="32" font-size="9" fill="#085041" font-weight="500">→ ← → ← (random)</text>
+              <text x="20" y="52" font-size="9" fill="#0F6E56">Unmagnetized</text>
+              <rect x="160" y="10" width="120" height="35" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+              <text x="182" y="32" font-size="9" fill="#3C3489" font-weight="500">→ → → → (aligned)</text>
+              <text x="175" y="52" font-size="9" fill="#534AB7">Magnetized (H applied)</text>
+            </svg></div>` },
+      { q: "What is hysteresis in ferromagnetics? Define retentivity and coercivity.", imp: true,
+        a: `<p><strong>Hysteresis:</strong> When a ferromagnetic material is taken through a full magnetization cycle, the B-H curve forms a loop (hysteresis loop). The material lags behind the field — energy is lost as heat per cycle.</p>
+            <ul><li><strong>Retentivity (Br):</strong> Residual magnetism remaining after the applied field is removed (H=0, B≠0)</li>
+            <li><strong>Coercivity (Hc):</strong> Reverse field required to completely demagnetize the material (B=0)</li></ul>
+            <p>Hysteresis loop area = energy loss per cycle per unit volume.</p>` },
+      { q: "Differentiate hard and soft magnetic materials with examples.", imp: true,
+        a: `<table style="width:100%;font-size:12.5px;border-collapse:collapse;">
+            <tr style="background:#EEEDFE;"><th style="padding:4px 8px;text-align:left;color:#3C3489;">Property</th><th style="padding:4px 8px;text-align:left;color:#3C3489;">Soft</th><th style="padding:4px 8px;text-align:left;color:#3C3489;">Hard</th></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Coercivity</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Low</td><td style="padding:3px 8px;color:var(--color-text-secondary);">High</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:3px 8px;color:var(--color-text-secondary);">Retentivity</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Low</td><td style="padding:3px 8px;color:var(--color-text-secondary);">High</td></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Loop area</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Small (less loss)</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Large</td></tr>
+            <tr style="background:var(--color-background-secondary);"><td style="padding:3px 8px;color:var(--color-text-secondary);">Application</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Transformer cores, inductors</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Permanent magnets</td></tr>
+            <tr><td style="padding:3px 8px;color:var(--color-text-secondary);">Example</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Silicon steel, Permalloy</td><td style="padding:3px 8px;color:var(--color-text-secondary);">Alnico, SmCo</td></tr>
+            </table>` },
+      { q: "What is the displacement vector (D)? Write the relation between D, E, and P.",
+        a: `<p><strong>Electric displacement vector D</strong> accounts for both free and bound charges in a dielectric medium.</p>
+            <div class="formula">D = ε₀E + P = εE</div>
+            <p>where ε₀ = permittivity of free space, E = electric field, P = polarization, ε = permittivity of medium.</p>
+            <p>Also: D = ε₀εᵣE where εᵣ = relative permittivity (dielectric constant)</p>` }
+    ]
+  },
+  {
+    id: 5,
+    name: "Unit V",
+    title: "Semiconductors",
+    sub: "Band theory, Hall effect, Drift & Diffusion",
+    qs: [
+      { q: "Classify solids into conductors, semiconductors, and insulators on the basis of band theory.", imp: true,
+        a: `<ul><li><strong>Conductor:</strong> Valence band and conduction band overlap (no gap) or conduction band is partially filled. Eg: Copper, Aluminium</li>
+            <li><strong>Semiconductor:</strong> Small band gap (Eg ≈ 1 eV). At room temperature, some electrons jump to conduction band. Eg: Si (1.1 eV), Ge (0.7 eV)</li>
+            <li><strong>Insulator:</strong> Large band gap (Eg > 3 eV). Electrons cannot cross. Eg: Diamond (5.5 eV), Glass</li></ul>
+            <div class="diag-box"><div class="diag-label">Band gap comparison</div>
+            <svg viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <rect x="10" y="40" width="70" height="20" rx="2" fill="#C0DD97" stroke="#3B6D11" stroke-width="1"/>
+              <rect x="10" y="10" width="70" height="20" rx="2" fill="#C0DD97" stroke="#3B6D11" stroke-width="1"/>
+              <text x="45" y="68" font-size="9" fill="#27500A" text-anchor="middle">Conductor</text>
+              <text x="45" y="37" font-size="8" fill="#3B6D11" text-anchor="middle">overlap</text>
+              <rect x="120" y="40" width="70" height="20" rx="2" fill="#B5D4F4" stroke="#185FA5" stroke-width="1"/>
+              <rect x="120" y="15" width="70" height="20" rx="2" fill="#B5D4F4" stroke="#185FA5" stroke-width="1"/>
+              <text x="155" y="68" font-size="9" fill="#0C447C" text-anchor="middle">Semiconductor</text>
+              <text x="155" y="39" font-size="8" fill="#185FA5" text-anchor="middle">~1 eV</text>
+              <rect x="230" y="40" width="70" height="20" rx="2" fill="#F7C1C1" stroke="#A32D2D" stroke-width="1"/>
+              <rect x="230" y="5" width="70" height="20" rx="2" fill="#F7C1C1" stroke="#A32D2D" stroke-width="1"/>
+              <text x="265" y="68" font-size="9" fill="#791F1F" text-anchor="middle">Insulator</text>
+              <text x="265" y="37" font-size="8" fill="#A32D2D" text-anchor="middle">&gt;3 eV</text>
+            </svg></div>` },
+      { q: "What are intrinsic and extrinsic semiconductors? Give examples.", imp: true,
+        a: `<ul><li><strong>Intrinsic semiconductor:</strong> Pure semiconductor with no impurities. Electron-hole pairs are generated by thermal excitation. Equal number of electrons and holes. Eg: Pure Si, Pure Ge.</li>
+            <li><strong>Extrinsic semiconductor:</strong> Semiconductor doped with impurity atoms to increase conductivity.
+              <ul><li><strong>n-type:</strong> Doped with pentavalent atoms (P, As, Sb) → extra electrons as majority carriers</li>
+              <li><strong>p-type:</strong> Doped with trivalent atoms (B, Al, In) → holes as majority carriers</li></ul></li></ul>` },
+      { q: "State the Hall effect and write the expression for Hall coefficient.", imp: true,
+        a: `<p><strong>Hall effect:</strong> When a current-carrying conductor is placed in a perpendicular magnetic field, a transverse voltage (Hall voltage) develops across the conductor perpendicular to both current and field.</p>
+            <div class="formula">VH = RH · IB / d</div>
+            <p><strong>Hall coefficient:</strong></p>
+            <div class="formula">RH = 1/(ne) for n-type &nbsp;and&nbsp; RH = +1/(pe) for p-type</div>
+            <p>Sign of RH determines the type of semiconductor (positive for p-type, negative for n-type).</p>` },
+      { q: "Define drift velocity, mobility, and conductivity of semiconductors.", imp: true,
+        a: `<ul><li><strong>Drift velocity (vd):</strong> Average velocity acquired by charge carriers under an applied electric field. vd = μE</li>
+            <li><strong>Mobility (μ):</strong> Drift velocity per unit electric field. μ = vd/E (units: m²/V·s)</li>
+            <li><strong>Conductivity (σ):</strong> Ability of semiconductor to conduct electricity.</li></ul>
+            <div class="formula">σ = e(nμₑ + pμₕ)</div>
+            <p>where n, p = electron/hole concentrations; μₑ, μₕ = electron/hole mobilities.</p>` },
+      { q: "What is the law of mass action in semiconductors?",
+        a: `<p>In a semiconductor at thermal equilibrium, the product of electron concentration (n) and hole concentration (p) is a constant equal to the square of intrinsic carrier concentration (nᵢ).</p>
+            <div class="formula">n · p = nᵢ²</div>
+            <p>This holds for both intrinsic and extrinsic semiconductors at a given temperature. As n increases (n-type doping), p decreases proportionally and vice versa.</p>` },
+      { q: "What is the Fermi level position in intrinsic, n-type, and p-type semiconductors?", imp: true,
+        a: `<ul><li><strong>Intrinsic:</strong> Fermi level lies exactly at the middle of the band gap (between valence and conduction band)</li>
+            <li><strong>n-type:</strong> Fermi level shifts upward (closer to conduction band)</li>
+            <li><strong>p-type:</strong> Fermi level shifts downward (closer to valence band)</li></ul>
+            <p>At heavy doping, Fermi level may enter the conduction/valence band (degenerate semiconductor).</p>` },
+      { q: "Explain Einstein's relation connecting diffusion coefficient and mobility.",
+        a: `<p>Einstein's relation connects mobility (μ) and diffusion coefficient (D) of charge carriers:</p>
+            <div class="formula">D/μ = kT/e = VT (thermal voltage)</div>
+            <p>where k = Boltzmann constant, T = absolute temperature, e = electron charge.</p>
+            <p>At room temperature (300 K): VT = kT/e ≈ 26 mV</p>
+            <div class="formula">Dₑ/μₑ = Dₕ/μₕ = kT/e</div>` },
+      { q: "What is the Hall effect used for? List 4 applications.",
+        a: `<p>Applications of Hall effect:</p>
+            <ul><li>Determination of type of semiconductor (n or p)</li>
+            <li>Measurement of carrier concentration</li>
+            <li>Measurement of carrier mobility</li>
+            <li>Measurement of magnetic field strength (Gaussmeter)</li>
+            <li>Position sensors and proximity switches</li>
+            <li>Current measurement in high-power circuits (Hall current sensors)</li></ul>` },
+      { q: "Define energy band gap. How does it vary with temperature in semiconductors?",
+        a: `<p><strong>Band gap (Eg):</strong> The energy difference between the top of the valence band and the bottom of the conduction band.</p>
+            <p>In semiconductors, band gap <strong>decreases slightly with increase in temperature</strong> due to lattice expansion and increased electron-phonon interaction.</p>
+            <ul><li>Si: Eg = 1.12 eV at 300 K</li><li>Ge: Eg = 0.67 eV at 300 K</li><li>GaAs: Eg = 1.43 eV at 300 K</li></ul>` },
+      { q: "What are charge carriers in semiconductors? Explain drift and diffusion currents.",
+        a: `<p>Charge carriers in semiconductors: <strong>electrons</strong> (conduction band) and <strong>holes</strong> (valence band).</p>
+            <ul><li><strong>Drift current:</strong> Movement of carriers under applied electric field. Jdrift = σE = e(nμₑ + pμₕ)E</li>
+            <li><strong>Diffusion current:</strong> Movement of carriers from high to low concentration region.
+            <div class="formula">Jdiff = eDₑ(dn/dx) + eDₕ(dp/dx)</div></li></ul>
+            <p>Total current = Drift + Diffusion currents.</p>` },
+      { q: "Define Fermi energy in semiconductors. Write the expression for intrinsic carrier concentration.",
+        a: `<p>For intrinsic semiconductor, Fermi energy lies near the middle of band gap:</p>
+            <div class="formula">EF = (Ec + Ev)/2 + (3/4)kT ln(mₕ/mₑ)</div>
+            <p>Intrinsic carrier concentration:</p>
+            <div class="formula">nᵢ = √(NcNv) · exp(-Eg/2kT)</div>
+            <p>where Nc, Nv = effective density of states in conduction and valence bands; Eg = band gap energy.</p>` }
+    ]
+  }
+];
+
+const tabsEl = document.getElementById('tabs');
+const contentEl = document.getElementById('unit-content');
+const progEl = document.getElementById('prog');
+
+let activeUnit = 0;
+
+function renderTabs() {
+  tabsEl.innerHTML = '';
+  units.forEach((u, i) => {
+    const b = document.createElement('button');
+    b.className = 'unit-btn' + (i === activeUnit ? ' active' : '');
+    b.textContent = u.name + ' — ' + u.title.split(' ')[0] + '...';
+    b.onclick = () => { activeUnit = i; render(); };
+    tabsEl.appendChild(b);
+  });
+}
+
+function renderContent() {
+  const u = units[activeUnit];
+  progEl.style.width = ((activeUnit + 1) / units.length * 100) + '%';
+  contentEl.innerHTML = `
+    <div class="unit-header">
+      <p class="unit-title">${u.name}: ${u.title}</p>
+      <p class="unit-sub">${u.sub} — ${u.qs.length} questions</p>
+    </div>
+    ${u.qs.map((q, i) => `
+    <div class="qa-card">
+      <div class="qa-q" onclick="toggle(${u.id}_${i})">
+        <div class="q-num">${i+1}</div>
+        <div class="q-text">${q.q}${q.imp ? '<span class="imp-badge">★ Important</span>' : ''}</div>
+        <div class="q-arrow" id="arr_${u.id}_${i}">▼</div>
+      </div>
+      <div class="qa-a" id="ans_${u.id}_${i}">${q.a}</div>
+    </div>`).join('')}
+  `;
+}
+
+function toggle(id) {
+  const a = document.getElementById('ans_' + id);
+  const arr = document.getElementById('arr_' + id);
+  if (!a) return;
+  const open = a.classList.toggle('show');
+  if (arr) arr.classList.toggle('open', open);
+}
+
+function render() { renderTabs(); renderContent(); }
+render();
+</script>
